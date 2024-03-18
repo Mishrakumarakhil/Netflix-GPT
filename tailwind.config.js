@@ -6,3 +6,5 @@ module.exports = {
   },
   plugins: [],
 };
+
+// src -> https://tailwindcss.com/docs/guides/create-react-app
