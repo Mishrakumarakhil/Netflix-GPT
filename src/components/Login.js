@@ -3,6 +3,10 @@ import { Header } from "./Header";
 
 export const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
+
+  const handleButtonCLick = () => {
+    //Validate the form data
+  };
   const toggleSignInForm = () => {
     setIsSignIn(!isSignIn);
   };
@@ -37,7 +41,10 @@ export const Login = () => {
           placeholder="Password"
           className="p-4 my-4 w-full bg-gray-700"
         />
-        <button className="p-4 my-6 bg-red-700 w-full rounded-lg">
+        <button
+          className="p-4 my-6 bg-red-700 w-full rounded-lg"
+          onClick={handleButtonCLick}
+        >
           {isSignIn ? "Sign In" : "Sign Up"}
         </button>
         <p className="py-4 cursor-pointer" onClick={toggleSignInForm}>
