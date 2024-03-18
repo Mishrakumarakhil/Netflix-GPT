@@ -7,6 +7,7 @@
 - Login Form
 - Sign Up Form
 - Form Validation
+- Authentication Using FireBase
 
 # Features
 
