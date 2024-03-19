@@ -14,6 +14,8 @@
 - sudo npm install -g firebase-tools --force
 - firebase login
 - firebase init -> do hoisting setup with build file.
+- npm run build
+- firebase deploy
 
 # Features
 
