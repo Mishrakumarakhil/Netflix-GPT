@@ -9,6 +9,8 @@
 - Form Validation
 - Authentication Using FireBase
 
+---
+
 # Firbase CLI
 
 - sudo npm install -g firebase-tools --force
@@ -16,6 +18,10 @@
 - firebase init -> do hoisting setup with build file.
 - npm run build
 - firebase deploy
+
+---
+
+- Create SignUp User in Firebase
 
 # Features
 
