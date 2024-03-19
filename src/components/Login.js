@@ -1,7 +1,10 @@
 import React, { useRef, useState } from "react";
 import { Header } from "./Header";
 import { checkValidateDate } from "../utils/validate";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import {
+  createUserWithEmailAndPassword,
+  signInWithEmailAndPassword,
+} from "firebase/auth";
 import { auth } from "../utils/firebase";
 export const Login = () => {
   const [isSignIn, setIsSignIn] = useState(true);
@@ -38,6 +41,23 @@ export const Login = () => {
         });
     } else {
       //SignIn Logic
+
+      signInWithEmailAndPassword(
+        auth,
+        email.current.value,
+        password.current.value
+      )
+        .then((userCredential) => {
+          // Signed in
+          const user = userCredential.user;
+          console.log(user);
+          // ...
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          setErrorMessage(errorCode + " - " + errorMessage);
+        });
     }
   };
   const toggleSignInForm = () => {
