@@ -24,6 +24,7 @@
 - Create SignUp/SignIn User in Firebase
 - Add Logic for SignUp and SignIn from Firebase authentication for passowrd
   (Ref -> https://firebase.google.com/docs/auth/web/password-auth)
+- Created Redux Store with userSlice
 
 # Features
 
