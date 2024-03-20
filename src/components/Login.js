@@ -4,13 +4,18 @@ import { checkValidateDate } from "../utils/validate";
 import {
   createUserWithEmailAndPassword,
   signInWithEmailAndPassword,
+  updateProfile,
 } from "firebase/auth";
 import { auth } from "../utils/firebase";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { addUser } from "../utils/userSlice";
 export const Login = () => {
   const navigate = useNavigate();
+  const dispatch = useDispatch();
   const [isSignIn, setIsSignIn] = useState(true);
   const [errorMessage, setErrorMessage] = useState("");
+  const name = useRef(null);
   const email = useRef(null);
   const password = useRef(null);
 
@@ -33,7 +38,24 @@ export const Login = () => {
         .then((userCredential) => {
           // Signed up
           const user = userCredential.user;
-          navigate("/browse");
+
+          updateProfile(user, {
+            displayName: name.current.value,
+            photoURL: "https://avatars.githubusercontent.com/u/30576273?v=4",
+          })
+            .then(() => {
+              const { uid, email, displayName, photoURL } = auth.currentUser;
+              dispatch(addUser({ uid, email, displayName, photoURL }));
+              navigate("/browse");
+              // Profile updated!
+              // ...
+            })
+            .catch((error) => {
+              setErrorMessage(error.messgae);
+              // An error occurred
+              // ...
+            });
+
           // ...
         })
         .catch((error) => {
@@ -86,6 +108,7 @@ export const Login = () => {
         </h1>
         {!isSignIn && (
           <input
+            ref={name}
             type="text"
             placeholder="Full Name"
             className="p-4 my-4 w-full bg-gray-700"

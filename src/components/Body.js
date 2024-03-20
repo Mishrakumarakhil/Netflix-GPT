@@ -25,8 +25,8 @@ export const Body = () => {
     onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is  SignIn
-        const { uid, email, displayName } = user;
-        dispatch(addUser({ uid, email, displayName }));
+        const { uid, email, displayName, photoURL } = user;
+        dispatch(addUser({ uid, email, displayName, photoURL }));
         // navigate("/browse");
       } else {
         //User is SignOut
