@@ -25,6 +25,9 @@
 - Add Logic for SignUp and SignIn from Firebase authentication for passowrd
   (Ref -> https://firebase.google.com/docs/auth/web/password-auth)
 - Created Redux Store with userSlice
+- Add Loic for onAuthState Change from Firebase
+  (Ref -> https://firebase.google.com/docs/auth/web/manage-users)
+- Implemented SignOut and Updated Profile Functionality in Browse Page
 
 # Features
 
