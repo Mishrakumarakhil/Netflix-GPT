@@ -1,3 +1,5 @@
+import { TMDB_ACCESS_TOKEN } from "./secretKeys";
+
 export const LOGO =
   "https://cdn.cookielaw.org/logos/dd6b162f-1a32-456a-9cfe-897231c7763c/4345ea78-053c-46d2-b11e-09adaef973dc/Netflix_Logo_PMS.png";
 export const BG_URL =
@@ -9,7 +11,6 @@ export const API_OPTIONS = {
   method: "GET",
   headers: {
     accept: "application/json",
-    Authorization:
-      "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI3OTc1OGNjYTJhMzZiOWFhNzIzODczYmJmNzJiZGZkNSIsInN1YiI6IjYwMDgwODJlY2I4MDI4MDAzZWY5YjBmYyIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.Nm-eqUz6ly8u4rn9PjYNZc_hfwR2tUkKaGrR8Wm-mz8",
+    Authorization: `Bearer ${TMDB_ACCESS_TOKEN}`,
   },
 };
