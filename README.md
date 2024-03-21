@@ -31,6 +31,9 @@
 - unsubscribed to the onAuthStateChange callback.
 - Register for TMDB API for api and get access token
 - Get Data from TMDB now playing
+- Create Component for Maincontainer with Video BG and Video Info
+- Get Data for trailer key through TMDB movies id.
+- Custom hooks for get MovieData and trailer key.
 
 # Features
 
