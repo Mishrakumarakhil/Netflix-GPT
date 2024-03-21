@@ -29,6 +29,8 @@
   (Ref -> https://firebase.google.com/docs/auth/web/manage-users)
 - Implemented SignOut and Updated Profile Functionality in Browse Page
 - unsubscribed to the onAuthStateChange callback.
+- Register for TMDB API for api and get access token
+- Get Data from TMDB now playing
 
 # Features
 
