@@ -28,6 +28,7 @@
 - Add Loic for onAuthState Change from Firebase
   (Ref -> https://firebase.google.com/docs/auth/web/manage-users)
 - Implemented SignOut and Updated Profile Functionality in Browse Page
+- unsubscribed to the onAuthStateChange callback.
 
 # Features
 

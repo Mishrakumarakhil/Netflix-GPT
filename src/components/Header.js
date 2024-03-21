@@ -11,7 +11,7 @@ export const Header = () => {
   const user = useSelector((state) => state.user);
 
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
       if (user) {
         // User is  SignIn
         const { uid, email, displayName, photoURL } = user;
@@ -23,6 +23,12 @@ export const Header = () => {
         navigate("/");
       }
     });
+
+    //unsubscribe when compoent  UnMount
+
+    return () => {
+      unsubscribe();
+    };
   }, []);
   const handleSignOut = () => {
     signOut(auth)
