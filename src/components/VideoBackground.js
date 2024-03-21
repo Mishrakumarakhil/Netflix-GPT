@@ -18,7 +18,6 @@ export const VideoBackground = ({ movieId }) => {
 
     let trailer = filterData.length ? filterData[0] : json.results[0];
     dispatch(addtrailerVideo(trailer.key));
-    console.log("json", trailer);
   };
 
   useEffect(() => {
