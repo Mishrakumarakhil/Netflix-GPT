@@ -18,7 +18,7 @@ export const SecondaryContainer = () => {
         <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
 
         <MovieList title={"Trending"} movies={movies.nowPlayingMovies} />
-        <MovieList title={"Populer"} movies={movies.nowPlayingMovies} />
+        <MovieList title={"Populer"} movies={movies.populerMovies} />
         <MovieList title={"Upcoming Movies"} movies={movies.nowPlayingMovies} />
       </div>
     </div>
