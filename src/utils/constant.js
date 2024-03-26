@@ -14,3 +14,5 @@ export const API_OPTIONS = {
     Authorization: `Bearer ${TMDB_ACCESS_TOKEN}`,
   },
 };
+
+export const IMG_CDN = "https://image.tmdb.org/t/p/w780";
