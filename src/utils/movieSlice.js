@@ -16,7 +16,6 @@ const movieSlice = createSlice({
     },
 
     addPopulerMovies: (state, action) => {
-      console.log("action", action.payload);
       state.populerMovies = action.payload;
     },
   },
