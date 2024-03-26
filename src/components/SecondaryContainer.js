@@ -13,11 +13,14 @@ export const SecondaryContainer = () => {
   // }
 
   return (
-    <div>
-      <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
-      <MovieList title={"Trending"} movies={movies.nowPlayingMovies} />
-      <MovieList title={"Populer"} movies={movies.nowPlayingMovies} />
-      <MovieList title={"Upcoming Movies"} movies={movies.nowPlayingMovies} />
+    <div className="bg-black">
+      <div className="-mt-40 pl-12 relative z-20">
+        <MovieList title={"Now Playing"} movies={movies.nowPlayingMovies} />
+
+        <MovieList title={"Trending"} movies={movies.nowPlayingMovies} />
+        <MovieList title={"Populer"} movies={movies.nowPlayingMovies} />
+        <MovieList title={"Upcoming Movies"} movies={movies.nowPlayingMovies} />
+      </div>
     </div>
   );
 };
