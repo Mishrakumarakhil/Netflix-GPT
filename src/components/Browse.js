@@ -9,7 +9,7 @@ export const Browse = () => {
   useNowPlayingMovies();
   usePopulerMovies();
   return (
-    <div>
+    <>
       <Header />
       <MainContainer />
       <SecondaryContainer />
@@ -21,6 +21,6 @@ export const Browse = () => {
         //   - movieList
         //   - cars*N
       }
-    </div>
+    </>
   );
 };
